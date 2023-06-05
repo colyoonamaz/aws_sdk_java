@@ -16,5 +16,5 @@ jobs:
         run: |
               mvn --batch-mode --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
               mvn --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
-              mvn --batch-mode -q --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
-              mvn -q -f exporting-tool-for-amazon-keyspaces-main/pom.xml install package
+              mvn --batch-mode --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
+              mvn -f exporting-tool-for-amazon-keyspaces-main/pom.xml install package
