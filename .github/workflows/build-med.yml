@@ -14,6 +14,7 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: |
-              mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
-              mvn --batch-mode -q --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
-              mvn --batch-mode --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
+              mvn -q --batch-mode --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
+              mvn -q --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
+              mvn -q --batch-mode --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
+              mvn -q -f exporting-tool-for-amazon-keyspaces-main/pom.xml install package
