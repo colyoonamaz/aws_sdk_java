@@ -15,4 +15,4 @@ jobs:
       - name: Build with Maven
         run: |
               mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
-              mvn -f aws-kms-pq-tls-example-main/pom.xml clean verify
+              mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
