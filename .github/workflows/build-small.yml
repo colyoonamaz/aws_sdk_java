@@ -15,4 +15,4 @@ jobs:
       - name: Build with Maven
         run: |
               mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
-              mvn -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml clean verify
+              mvn --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
