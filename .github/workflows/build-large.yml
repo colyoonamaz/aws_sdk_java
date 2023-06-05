@@ -14,8 +14,7 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: |
-              pip3 install cloudformation-cli-java-plugin
-              mvn -q --batch-mode --update-snapshots -f aws-cloudformation-stack-instances-main/pom.xml package
+        
               mvn -X -f amazon-kinesis-data-analytics-flink-starter-kit-master/pom.xml clean install
               mvn -q --batch-mode --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
               mvn -q --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
