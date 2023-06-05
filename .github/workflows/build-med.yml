@@ -16,4 +16,4 @@ jobs:
         run: |
               mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
               mvn --batch-mode -q --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
-              mvn --batch-mode --update-snapshots -f aws-waf-dashboard-master/pom.xml package
+              mvn --batch-mode --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
