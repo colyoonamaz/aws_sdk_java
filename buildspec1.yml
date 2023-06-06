@@ -6,5 +6,8 @@ phases:
       java: corretto17
   build:
     commands:
-      - mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
-      - mvn --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
+      - mvn -X -f amazon-kinesis-data-analytics-flink-starter-kit-master/pom.xml clean install
+      - mvn -q --batch-mode --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
+      - mvn -q --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
+      - mvn -q --batch-mode --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
+      - mvn -q -f exporting-tool-for-amazon-keyspaces-main/pom.xml install package
