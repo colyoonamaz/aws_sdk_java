@@ -1,0 +1,16 @@
+Name: test-med
+SchemaVersion: "1.0"
+
+Actions:
+  Build:
+    Identifier: aws/build@v1
+    Inputs:
+      Sources:
+        - WorkflowSource
+    Configuration:
+      Steps:
+        - Run: mvn -X -f amazon-kinesis-data-analytics-flink-starter-kit-master/pom.xml clean install
+        - Run: mvn -q --batch-mode --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
+        - Run: mvn -q --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
+        - Run: mvn -q --batch-mode --update-snapshots -f rds-breakglass-user-management-master/pom.xml package
+        - Run: mvn -q -f exporting-tool-for-amazon-keyspaces-main/pom.xml install package
