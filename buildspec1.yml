@@ -1,9 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto17
   build:
     commands:
       - mvn -X -f amazon-kinesis-data-analytics-flink-starter-kit-master/pom.xml clean install
