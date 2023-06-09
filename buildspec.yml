@@ -3,6 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - java --version
       - mvn --batch-mode -q --update-snapshots -f aws-kms-pq-tls-example-main/pom.xml package
       - mvn --batch-mode --update-snapshots -f skiresort-example-dynamodb-aws-sdk-v1-main/pom.xml package
